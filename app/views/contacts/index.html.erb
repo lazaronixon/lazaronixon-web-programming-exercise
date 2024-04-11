@@ -1,0 +1,23 @@
+<p class="flush--block-start push--block-end align--center">
+  <%= link_to "← Back to accounts", accounts_path, class: "btn" %>
+</p>
+
+<div class="sheet">
+  <div class="u-relative">
+    <div class="sheet-actions">
+      <p class="flush">
+        <%= link_to "Import", "", class: "btn btn--icon" %>
+      </p>
+    </div>
+  </div>
+
+  <header class="align--center">
+    <h1 class="hdg hdg--divider hdg--divider-centered flush flex-item--grow">
+      <span>Contacts</span>
+    </h1>
+  </header>
+
+  <section class="contact-list">
+    <%= render @contacts %>
+  </section>
+</div>

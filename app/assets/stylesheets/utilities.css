@@ -1,0 +1,35 @@
+:root {
+  /* Layout */
+  --body-padding: 6.4rem;
+  --content-width: 98rem;
+  --page-padding: 1.6rem;
+
+  /* Spacing */
+  --base-space: 1.25em;
+
+  /* Fonts */
+  --font-family: -apple-system, BlinkMacSystemFont, Aptos, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-size-base: 11px;
+  --font-size-x-small: 1.4rem;
+  --font-size-small: 1.6rem;
+  --font-size-medium: 1.8rem;
+  --font-size-large: 2rem;
+  --font-size-x-large: 2.8rem;
+  --font-size-xx-large: 4rem;
+}
+
+/* Utility classes */
+.align--center { text-align: center; }
+
+.flex-item--grow { flex-grow: 1; }
+
+.flush { margin: 0 !important; }
+.flush--block-start { margin-block-start: 0 !important; }
+
+.push { margin: var(--base-space) !important; }
+.push--block-start { margin-block-start: var(--base-space) !important; }
+.push--block-end { margin-block-end: var(--base-space) !important; }
+
+.txt--break-words { word-wrap: break-word; }
+
+.u-relative { position: relative; }

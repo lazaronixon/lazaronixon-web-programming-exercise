@@ -1,0 +1,44 @@
+:root {
+  --rgb-almost-black: 35, 28, 51;
+  --rgb-almost-white: 236, 233, 230;
+  --rgb-background: var(--rgb-white);
+  --rgb-black: 0, 0, 0;
+  --rgb-blue: 0, 116, 228;
+  --rgb-gray: 226, 221, 215;
+  --rgb-ink: var(--rgb-almost-black);
+  --rgb-purple: 85, 34, 250;
+  --rgb-white: 255, 255, 255;
+
+  --color-action-group-surface: rgba(var(--rgb-black), 0.03);
+  --color-action-group-action: rgba(var(--rgb-black), 0.03);
+  --color-action-group-action-focused: rgba(var(--rgb-black), 0.12);
+  --color-action-group-action-hovered: rgba(var(--rgb-black), 0.06);
+  --color-action-group-border: rgba(var(--rgb-black), 0.05);
+  --color-always-black: rgb(var(--rgb-almost-black));
+  --color-border: rgba(var(--rgb-ink), 0.15);
+  --color-border--solid: rgb(var(--rgb-ink));
+  --color-bg--main: rgb(var(--rgb-background));
+  --color-bg--sheet: var(--color-bg--main);
+  --color-bg--surface: rgba(var(--rgb-gray), 0.4);
+  --color-secondary: rgb(var(--rgb-blue));
+  --color-shadow: rgba(var(--rgb-gray), 0.5);
+  --color-tertiary: rgb(var(--rgb-purple));
+  --color-txt: rgb(var(--rgb-ink));
+  --color-txt--subtle: rgba(var(--rgb-ink), 0.66);
+
+  @media (prefers-color-scheme: dark) {
+    --rgb-almost-black: 27, 39, 51;
+    --rgb-background: var(--rgb-almost-black);
+    --rgb-blue: 80, 162, 255;
+    --rgb-gray: 51, 60, 71;
+    --rgb-ink: var(--rgb-almost-white);
+    --rgb-purple: 134, 126, 255;
+
+    --color-action-group-surface: rgba(var(--rgb-almost-white), 0.05);
+    --color-action-group-action: rgba(var(--rgb-almost-white), 0.05);
+    --color-action-group-action-focused: rgba(var(--rgb-almost-white), 0.08);
+    --color-action-group-action-hovered: rgba(var(--rgb-almost-white), 0.08);
+    --color-action-group-border: rgba(var(--rgb-almost-white), 0.08);
+    --color-shadow: rgba(0,0,0,0.25);
+  }
+}

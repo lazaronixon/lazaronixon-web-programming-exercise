@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.15.7//EN
+N:Heinemeier Hansson;David;;;
+FN:David Heinemeier Hansson
+ORG:Basecamp;
+EMAIL;type=INTERNET;type=WORK;type=pref:david@basecamp.com
+TEL;type=CELL;type=VOICE;type=pref:555-123-4567
+END:VCARD
