@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   resources :accounts, only: :index do
     resources :contacts, only: :index
+    resources :imports,  only: %i[ new create show ]
   end
 end
