@@ -42,6 +42,7 @@ body {
   padding: 0.3em 0.8em;
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
 
   &:focus:not(:focus-visible) {
     outline: none;
@@ -111,6 +112,10 @@ body {
   line-height: 1;
 }
 
+.hdg--x-large {
+  font-size: var(--font-size-x-large);
+}
+
 .hdg--divider {
   position: relative;
   z-index: 1;
@@ -133,6 +138,71 @@ body {
 .hdg--divider-centered {
   > span {
     padding: 0 0.25em;
+  }
+}
+
+.input {
+  appearance: none;
+  background-color: var(--color-bg--main);
+  border-radius: 3rem;
+  border-width: $border;
+  padding: 1em;
+  width: 100%;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+/* Lists */
+.list--boxed {
+  background: linear-gradient(135deg, var(--color-bg--secondary) 0%, var(--color-bg--tertiary) 100%);
+  padding: 1em 1.5em;
+  border-radius: 1em;
+}
+
+/* Spinner */
+.spinner {
+  display: none;
+  margin: 2rem auto;
+  width: 7rem;
+  text-align: center
+}
+
+.spinner--show .spinner {
+  display: block
+}
+
+.spinner__dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 100%;
+  display: inline-block;
+  animation: spinner-bounce 1.4s infinite ease-in-out both
+}
+
+.spinner__dot--1 {
+  animation-delay: -0.32s
+}
+
+.spinner__dot--2 {
+  border-color: var(--color-secondary);
+  animation-delay: -0.16s
+}
+
+.spinner__dot--3 {
+  border-color: var(--color-tertiary)
+}
+
+@keyframes spinner-bounce {
+  0%, 80%, 100% {
+    transform:scale(0)
+  }
+
+  40% {
+    transform:scale(1)
   }
 }
 

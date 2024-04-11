@@ -1,0 +1,13 @@
+<h1 class="hdg">
+  Your import has failed.
+</h1>
+
+<section class="list--boxed push--bottom">
+  <p><strong>To fix this, try the following...</strong></p>
+  <ol>
+    <li>Double check that the file contains at least one contact with an email address.</li>
+    <li>Re-export the file and try importing it into HEY again.</li>
+  </ol>
+</section>
+
+<%= link_to "Try another import", new_account_import_path(@account), class: "btn" %>

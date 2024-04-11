@@ -29,7 +29,9 @@
 .push { margin: var(--base-space) !important; }
 .push--block-start { margin-block-start: var(--base-space) !important; }
 .push--block-end { margin-block-end: var(--base-space) !important; }
+.push--bottom { margin-bottom: var(--base-space) !important; }
 
 .txt--break-words { word-wrap: break-word; }
 
 .u-relative { position: relative; }
+.u-display-b { display: block; }

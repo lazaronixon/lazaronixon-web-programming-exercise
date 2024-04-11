@@ -8,6 +8,7 @@
   --rgb-ink: var(--rgb-almost-black);
   --rgb-purple: 85, 34, 250;
   --rgb-white: 255, 255, 255;
+  --rgb-mint: 157, 255, 236;
 
   --color-action-group-surface: rgba(var(--rgb-black), 0.03);
   --color-action-group-action: rgba(var(--rgb-black), 0.03);
@@ -18,8 +19,11 @@
   --color-border: rgba(var(--rgb-ink), 0.15);
   --color-border--solid: rgb(var(--rgb-ink));
   --color-bg--main: rgb(var(--rgb-background));
+  --color-bg--secondary: rgba(var(--rgb-blue), 0.15);
+  --color-bg--tertiary: rgba(var(--rgb-purple), 0.15);
   --color-bg--sheet: var(--color-bg--main);
   --color-bg--surface: rgba(var(--rgb-gray), 0.4);
+  --color-primary: rgb(var(--rgb-mint));
   --color-secondary: rgb(var(--rgb-blue));
   --color-shadow: rgba(var(--rgb-gray), 0.5);
   --color-tertiary: rgb(var(--rgb-purple));

@@ -1,0 +1,17 @@
+<p class="flush--block-start push--block-end align--center">
+  <%= link_to "← Back to contacts", account_contacts_path(@account), class: "btn" %>
+</p>
+
+<div class="sheet">
+  <header class="align--center">
+    <h1 class="flush hdg">Import Contacts into HEY</h1>
+    <p>Upload a <strong>vCard (.vcf)</strong> file to import and screen-in your contacts from another service, like Gmail, iCloud, or Outlook.</p>
+  </header>
+
+  <section class="list--boxed">
+    <%= form_with(model: [@account, @import], class: "align--center") do |form| %>
+      <%= form.file_field :file, required: true, accept: ".vcf", class: "input u-display-b push--bottom" %>
+      <%= form.submit "Upload and import", class: "btn" %>
+    <% end %>
+  </section>
+</div>
