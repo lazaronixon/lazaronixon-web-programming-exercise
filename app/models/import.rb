@@ -4,6 +4,7 @@ class Import < ApplicationRecord
   has_one_attached :file
 
   after_create_commit :process_file_later
+  after_update_commit :broadcast_refresh_later
 
   enum status: %w[ processing processed failed ].index_by(&:itself)
 

@@ -1,9 +1,6 @@
-// Load all the controllers within this directory and all subdirectories. 
-// Controller files must be named *_controller.js or *_controller.ts.
+// Import and register all your controllers from the importmap under controllers/*
+import { application } from "controllers/application"
 
-import { Application } from "stimulus"
-import { definitionsFromContext } from "stimulus/webpack-helpers"
-
-const application = Application.start()
-const context = require.context("controllers", true, /_controller\.(js|ts)$/)
-application.load(definitionsFromContext(context))
+// Eager load all controllers defined in the import map under controllers/**/*_controller
+import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
+eagerLoadControllersFrom("controllers", application)
