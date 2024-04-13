@@ -23,10 +23,12 @@ class Import < ApplicationRecord
   private
     def import_contacts_from_file
       vcards = Vpim::Vcard.decode(file.download)
-      vcards.each do |vcard|
-        account.contacts.create!(name: vcard.name.fullname, email_address: vcard.email.presence)
-      rescue ActiveRecord::ActiveRecordError => e
-        logger.debug "Exception while creating #{vcard.email}, failed with: #{e.message}"
-      end
+      vcards = vcards.reject { |vcard| vcard.email.blank? }
+      contact_attributes = vcards.map { |vcard| contact_attributes_for(vcard) }
+      account.contacts.insert_all contact_attributes
+    end
+
+    def contact_attributes_for(vcard)
+      { name: vcard.name.fullname, email_address: vcard.email }
     end
 end
