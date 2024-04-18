@@ -1,5 +1,5 @@
-class ImporterJob < ApplicationJob
-  queue_as :default
+class ImportJob < ApplicationJob
+  queue_as :importation
 
   def perform(import)
     import.process_file

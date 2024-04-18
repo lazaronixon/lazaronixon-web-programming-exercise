@@ -112,10 +112,6 @@ body {
   line-height: 1;
 }
 
-.hdg--x-large {
-  font-size: var(--font-size-x-large);
-}
-
 .hdg--divider {
   position: relative;
   z-index: 1;
@@ -144,15 +140,16 @@ body {
 .input {
   appearance: none;
   background-color: var(--color-bg--main);
-  border-radius: 3rem;
-  border-width: $border;
-  padding: 1em;
-  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: .6rem;
+  padding: .5em;
+  font-size: inherit;
+  line-height: inherit;
+}
 
-  &:disabled {
-    pointer-events: none;
-    opacity: 0.5;
-  }
+.input--full-width {
+  display: block;
+  width: 100%;
 }
 
 /* Lists */

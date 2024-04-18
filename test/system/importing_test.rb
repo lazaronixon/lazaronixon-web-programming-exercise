@@ -4,7 +4,7 @@ class ImportingTest < ApplicationSystemTestCase
   setup { @account = accounts(:basecamp) }
 
   test "importing" do
-    visit new_account_import_url(@account)
+    visit new_account_contacts_import_url(@account)
     attach_file "import_file", file_fixture("david.vcf")
     click_on "Upload and import"
 

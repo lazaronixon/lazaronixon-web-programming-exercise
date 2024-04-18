@@ -3,11 +3,11 @@
 </h1>
 
 <p class="flush--top">
-  Please review these samples from the vCard to make sure it looks correct:
+  Please review your contacts to make sure it looks correct:
 </p>
 
 <section class="contact-list push--bottom">
-  <%= render @account.contacts.order(created_at: :desc) %>
+  <%= render partial: "contacts/contact", collection: @account.contacts %>
 </section>
 
 <%= link_to "Yes, looks good", account_contacts_path(@account), class: "btn" %>

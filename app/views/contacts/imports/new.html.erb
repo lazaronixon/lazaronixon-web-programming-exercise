@@ -9,9 +9,9 @@
   </header>
 
   <section class="list--boxed">
-    <%= form_with(model: [@account, @import], class: "align--center") do |form| %>
-      <%= form.file_field :file, required: true, accept: ".vcf", class: "input u-display-b push--bottom" %>
-      <%= form.submit "Upload and import", class: "btn" %>
+    <%= form_with(model: [@account, :contacts, @import], class: "align--center") do |form| %>
+      <%= form.file_field :file, required: true, accept: ".vcf", class: "input input--full-width push--bottom" %>
+      <%= form.submit "Upload and import", "data-turbo-submits-with": "Uploading...", class: "btn" %>
     <% end %>
   </section>
 </div>

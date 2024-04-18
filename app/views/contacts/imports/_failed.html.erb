@@ -1,0 +1,14 @@
+</header>
+  <h1 class="hdg">We had some trouble importing that vCard.</h1>
+  <p>This is usually because the file was formatted incorrectly, or it had too many contacts for us to process. <p>
+</header>
+
+<section class="list--boxed push--bottom">
+  <p><strong>To fix this, try the following...</strong></p>
+  <ol>
+    <li>Select a smaller batch of contacts when exporting from your service provider.</li>
+    <li>Re-export the file and try importing it into HEY again.</li>
+  </ol>
+</section>
+
+<%= link_to "Try another import", new_account_contacts_import_path(@account), class: "btn" %>
