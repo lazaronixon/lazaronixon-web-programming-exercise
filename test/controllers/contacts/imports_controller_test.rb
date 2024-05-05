@@ -15,7 +15,7 @@ class Contacts::ImportsControllerTest < ActionDispatch::IntegrationTest
     end
 
     follow_redirect!
-    assert_select "h1", /Your import has been processed/
+    assert_select "h1", /Does this look right?/
     assert_select "h3", /Heinemeier Hansson/
   end
 

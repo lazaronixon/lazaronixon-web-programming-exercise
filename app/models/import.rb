@@ -1,5 +1,8 @@
 class Import < ApplicationRecord
   belongs_to :account
+
+  has_many :contacts
+
   has_one_attached :file
 
   after_create_commit :process_file_later
@@ -32,6 +35,6 @@ class Import < ApplicationRecord
     end
 
     def contact_attributes_for(vcard)
-      { name: vcard.name.fullname, email_address: vcard.email.downcase }
+      { name: vcard.name.fullname, email_address: vcard.email.downcase, import_id: self.id }
     end
 end

@@ -1,13 +1,13 @@
 <h1 class="hdg">
-  Your import has been processed.
+  Does this look right?
 </h1>
 
 <p class="flush--top">
-  Please review your contacts to make sure it looks correct:
+  <strong>Your import is being processed.</strong> Please review these samples from the vCard to make sure it looks correct:
 </p>
 
 <section class="contact-list push--bottom">
-  <%= render partial: "contacts/contact", collection: @account.contacts %>
+  <%= render partial: "contacts/contact", collection: @import.contacts %>
 </section>
 
 <%= link_to "Yes, looks good", account_contacts_path(@account), class: "btn" %>
