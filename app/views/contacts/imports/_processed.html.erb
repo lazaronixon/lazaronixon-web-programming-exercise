@@ -7,7 +7,12 @@
 </p>
 
 <section class="contact-list push--bottom">
-  <%= render partial: "contacts/contact", collection: @import.contacts %>
+  <% if @import.contacts.exists? %>
+    <%= render partial: "contacts/contact", collection: @import.contacts %>
+  <% else %>
+    <p class="list--boxed">No new contacts were imported.</p>
+  <% end %>
 </section>
 
 <%= link_to "Yes, looks good", account_contacts_path(@account), class: "btn" %>
+<%= link_to "No, undo the import", account_contacts_import_path(@account, @import), "data-turbo-method": :delete, class: "btn" %>

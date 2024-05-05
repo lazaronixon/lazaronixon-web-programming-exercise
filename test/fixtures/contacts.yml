@@ -7,3 +7,4 @@ rosa:
   account: basecamp
   name: Rosa
   email_address: rosa@basecamp.com
+  import: one

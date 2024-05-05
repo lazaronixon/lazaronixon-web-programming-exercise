@@ -1,4 +1,15 @@
 <div class="sheet align--center spinner--show">
-  <%= turbo_stream_from @import %>
-  <%= render @import.status %>
+  <h1 class="hdg">
+    Review your vCard import from <%= l(@import.created_at.to_date, format: :long) %>
+  </h1>
+
+  <section class="contact-list push--bottom">
+    <% if @import.contacts.exists? %>
+      <%= render partial: "contacts/contact", collection: @import.contacts %>
+    <% else %>
+      <p class="list--boxed">No new contacts were imported.</p>
+    <% end %>
+  </section>
+
+  <%= link_to "Undo the import", account_contacts_import_path(@account, @import), "data-turbo-method": :delete, class: "btn" %>
 </div>

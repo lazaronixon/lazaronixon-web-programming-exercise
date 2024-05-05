@@ -1,7 +1,6 @@
 class Import < ApplicationRecord
+  has_many   :contacts, dependent: :destroy_async
   belongs_to :account
-
-  has_many :contacts
 
   has_one_attached :file
 

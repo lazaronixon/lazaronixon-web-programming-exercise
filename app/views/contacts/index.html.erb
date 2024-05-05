@@ -15,9 +15,18 @@
     <h1 class="hdg hdg--divider hdg--divider-centered flush flex-item--grow">
       <span>Contacts</span>
     </h1>
+    <% if notice %>
+      <p class="list--boxed"><%= notice %></p>
+    <% end %>
   </header>
 
   <section class="contact-list">
     <%= render @contacts %>
   </section>
 </div>
+
+<% if last_import = @account.imports.processed.last %>
+  <p class="align--center">
+    Your last import was on <%= l(last_import.created_at.to_date, format: :long) %>. <%= link_to "Review this import", account_contacts_import_path(@account, last_import) %>
+  </p>
+<% end %>

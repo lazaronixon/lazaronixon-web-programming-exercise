@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :contacts, only: :index
 
     namespace :contacts do
-      resources :imports, only: %i[ new create show ]
+      resources :imports, only: %i[ show new edit create destroy ]
     end
   end
 end
